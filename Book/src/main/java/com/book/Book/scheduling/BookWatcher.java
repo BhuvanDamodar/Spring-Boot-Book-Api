@@ -19,7 +19,7 @@ public class BookWatcher {
 
 //    @Scheduled(fixedRate = 5000)  --To execute after 5 seconds interval
 //    @Scheduled(cron = "0 15 10 15 * ?" ) -- scheduling a task to be executed at 10:15 AM on the 15th day of every month.
-    @Scheduled(cron ="* * * * * *")
+    @Scheduled(cron ="* * * * * *")  // crontab guru - website for cron expression editor
     public void bookCount(){
         final long bookCount = bookRepo.count();
         log.info("There are {} books in the database", bookCount);
